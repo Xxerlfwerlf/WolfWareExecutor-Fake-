@@ -1,0 +1,115 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local WolfWareexe = Instance.new("ScreenGui")
+local UI = Instance.new("Frame")
+local Label = Instance.new("TextLabel")
+local Title = Instance.new("TextLabel")
+local Executor = Instance.new("TextButton")
+local Inject = Instance.new("TextButton")
+local Label2 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+
+--Properties:
+
+WolfWareexe.Name = "WolfWare.exe"
+WolfWareexe.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+WolfWareexe.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+UI.Name = "UI"
+UI.Parent = WolfWareexe
+UI.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+UI.BorderColor3 = Color3.fromRGB(58, 58, 58)
+UI.Position = UDim2.new(0.376591861, 0, 0.289752662, 0)
+UI.Size = UDim2.new(0, 579, 0, 329)
+
+Label.Name = "Label"
+Label.Parent = UI
+Label.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Label.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Label.Size = UDim2.new(0, 579, 0, 29)
+Label.Font = Enum.Font.ArialBold
+Label.Text = ""
+Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label.TextScaled = true
+Label.TextSize = 14.000
+Label.TextWrapped = true
+
+Title.Name = "Title"
+Title.Parent = UI
+Title.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Title.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Title.Size = UDim2.new(0, 164, 0, 29)
+Title.Font = Enum.Font.ArialBold
+Title.Text = "WolfWare.exe"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Executor.Name = "Executor"
+Executor.Parent = UI
+Executor.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Executor.BorderColor3 = Color3.fromRGB(38, 38, 38)
+Executor.Position = UDim2.new(0, 0, 0.848024309, 0)
+Executor.Size = UDim2.new(0, 128, 0, 50)
+Executor.Font = Enum.Font.ArialBold
+Executor.Text = "Execute"
+Executor.TextColor3 = Color3.fromRGB(255, 255, 255)
+Executor.TextScaled = true
+Executor.TextSize = 14.000
+Executor.TextWrapped = true
+
+Inject.Name = "Inject"
+Inject.Parent = UI
+Inject.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Inject.BorderColor3 = Color3.fromRGB(38, 38, 38)
+Inject.Position = UDim2.new(0.221070811, 0, 0.848024309, 0)
+Inject.Size = UDim2.new(0, 139, 0, 50)
+Inject.Font = Enum.Font.ArialBold
+Inject.Text = "Inject"
+Inject.TextColor3 = Color3.fromRGB(255, 255, 255)
+Inject.TextScaled = true
+Inject.TextSize = 14.000
+Inject.TextWrapped = true
+
+Label2.Name = "Label2"
+Label2.Parent = UI
+Label2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Label2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+Label2.Position = UDim2.new(0, 0, 0.823708236, 0)
+Label2.Size = UDim2.new(0, 579, 0, 8)
+Label2.Font = Enum.Font.ArialBold
+Label2.Text = ""
+Label2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Label2.TextScaled = true
+Label2.TextSize = 14.000
+Label2.TextWrapped = true
+
+TextBox.Parent = UI
+TextBox.BackgroundColor3 = Color3.fromRGB(84, 84, 84)
+TextBox.BorderColor3 = Color3.fromRGB(84, 84, 84)
+TextBox.Position = UDim2.new(0, 0, 0.106382981, 0)
+TextBox.Size = UDim2.new(0, 579, 0, 236)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Put script here (FAKE EXECUTOR)"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+-- Scripts:
+
+local function MGYPSP_fake_script() -- WolfWareexe.Dragify 
+	local script = Instance.new('Script', WolfWareexe)
+
+	frame = script.Parent.UI
+	frame.Draggable = true
+	frame.Selectable = true
+	frame.Active = true
+	
+end
+coroutine.wrap(MGYPSP_fake_script)()
